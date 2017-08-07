@@ -2,100 +2,201 @@
 <html lang="en">
 
 <head>
-<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Cainã Brazil - CV</title>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Cainã Brazil - CV</title>
 
-<link rel="stylesheet" href="Vendor/themify-icons/themify-icons.css">
+	<!-- Styling-->
+	<link rel="stylesheet" href="Vendor/themify-icons/themify-icons.css">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
 
-<!-- JQuery -->
-<script src="Vendor/jquery-3.2.1.min.js"></script>
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<!-- JQuery -->
+	<script src="Vendor/jquery-3.2.1.min.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-<style type="text/css">
-	body {
-		background-color: #888888;
-		font-family: Segoe UI;
-	}
-	h1{
-		font-family: sans-serif;
-	}
-	a{
-		color: #888888;
-	}
-	.subtitle{
-		font-weight: bold;
-		color:  rgb(0,180,0);
-	}
-	.ti{
-		color:  rgb(0,180,0);
-	}
-	.conteudo {
-		background-color: #f1f1f1;
-		box-shadow: 3px 3px 5px black;
-	}
-    
-    footer {
-      color: white;
-      padding: 15px;
-    }
+	<script>
+		$(document).ready(function() {
+			mudaCor('rgb(0,128,128)')
+		});
 
-	img{
-		float:right;
-	}
-</style>
+		function mudaCor(color) {
+			// var teal = 'rgb(0,128,128)'
+			$('body').css('--accent-color', color);
+		}
+	</script>
+
+	<style type="text/css">
+		:root {
+			--accent-color: rgb(0, 180, 0);
+		}
+
+		body {
+			background-color: #888888;
+			font-family: 'PT Sans';
+		}
+
+		#nome {
+			font-weight: bolder;
+			font-size: 40px;
+			margin-bottom: 0px;
+		}
+
+		#subtitle {
+			font-size: 20px;
+			font-weight: bold;
+			color: var(--accent-color);
+			padding: 3px;
+		}
+
+		.company {
+			font-size: 17px;
+			font-weight: bolder;
+			color: var(--accent-color);
+			padding-left: 3px;
+			margin-top: 0px;
+			margin-bottom: 0px;
+		}
+
+		.data-local {
+			font-size: 12px;
+		}
+
+		.conteudo {
+			background-color: #f1f1f1;
+			box-shadow: 3px 3px 5px black;
+		}
+
+		.sep-jobs {
+			border-top: dotted 5px;
+			color: #888888;
+		}
+
+		.language {
+			font-size: 17px;
+			font-weight: bolder;
+		}
+
+		.lang-st {
+			font-size: 37px;
+		}
+		.ti {
+			color: var(--accent-color);
+		}
+
+		a {
+			color: #888888;
+		}
+
+		footer {
+			color: white;
+			padding: 15px;
+		}
+
+		img {
+			float: right;
+		}
+	</style>
 </head>
 
 <body>
 
-		<div class="row content">
-			<div class="col-md-8 col-md-offset-2 text-left conteudo"> 
-				<div class="col-md-8">
-					<h1> Cainã Brazil Roriz </h1>
-					<p class="subtitle">Undergraduate in Computer Engineering</p>
-					
-					<div class="col-md-6">
-						<i class="ti ti-agenda"></i> +55 71 99247-3370 | 99373-2844
-					</div>
-					<div class="col-md-6">
-						<i class="ti ti-email"></i> cainabrazil@gmail.com
-					</div>
-					<div class="col-md-6">
-						<i class="ti ti-location-pin"></i>Salvador, BA
-					</div>
-					<div class="col-md-6">
-						<i class="ti ti-linkedin"></i><a href="https://www.linkedin.com/in/cain%C3%A3-brazil-586379114/"> <u>Cainã Brazil</u></a>
-					</div>
-					
+	<div class="row content">
+		<div class="col-md-8 col-md-offset-2 text-left conteudo">
+			<div class="col-md-8">
+				<h1 id="nome"> Cainã Brazil Roriz </h1>
+				<p id="subtitle">Undergraduate in Computer Engineering</p>
+
+				<div class="col-md-6">
+					<i class="ti ti-agenda"></i> +55 71 99247-3370 | 99373-2844
 				</div>
-				<div class="col-md-4">
-					<img class="img-circle" src="Content/img/face.png"  width="180" height="180"/>
+				<div class="col-md-6">
+					<i class="ti ti-email"></i> cainabrazil@gmail.com
 				</div>
-				
+				<div class="col-md-6">
+					<i class="ti ti-location-pin"></i>Salvador, BA
+				</div>
+				<div class="col-md-6">
+					<i class="ti ti-linkedin"></i><a href="https://www.linkedin.com/in/cain%C3%A3-brazil-586379114/"> <u>Cainã Brazil</u></a>
+				</div>
+
+			</div>
+			<div class="col-md-4">
+				<img class="img-circle" src="Content/img/face.png" width="180" height="180" />
+			</div>
+
+		</div>
+	</div>
+
+	<div class="row content">
+		<div class="col-sm-8 col-md-offset-2 text-left conteudo">
+			<div class="col-md-8">
+				<h2>Experience</h2>
+				<div class="row col-md-9">
+
+					<h4>Software development internship</h4>
+					<p class="company">
+						Open System
+					</p>
+					<p class="data-local">
+						<i class="ti ti-calendar"></i> Jun 2017 - ongoing <i class="ti ti-location-pin"></i> Salvador, BA
+					</p>
+					<p>
+						Open System is a serious company that has 20 years in the market providing integrated mobile solutions for big retail companies.
+						<li>
+							Initial development of big international, multi-language web-system, with mobile interface (C# Asp.Net MVC5 Xamarin SQLServer)
+						</li>
+					</p>
+					<hr class="sep-jobs" />
+
+					<h4>Software development internship</h4>
+					<p class="company">
+						Viva Inovação
+					</p>
+					<p class="data-local">
+						<i class="ti ti-calendar"></i> Mar 2017 - Jun 2017 <i class="ti ti-location-pin"></i> Salvador, BA
+					</p>
+					<p>
+						Viva Inovação is a company that develops technology solutions focused on increasing productivity
+						<li>
+							Great progress in a major project inside the company (C# Asp.Net MVC5 SQLServer)
+						</li>
+						<li>
+							Maintenance in PHP Yii framework project (MySQL PhpMyAdmin)
+						</li>
+					</p>
+					<hr class="sep-jobs" />
+
+					<h4>Game development internship</h4>
+					<p class="company">
+						Universidade Federal da Bahia
+					</p>
+					<p class="data-local">
+						<i class="ti ti-calendar"></i> Mar 2016 - Mar 2017 <i class="ti ti-location-pin"></i> Salvador, BA
+					</p>
+					<p>
+						Multi-subject Federal University project
+						<li>
+							From ground zero made an entire virtual world of my University Campus, including terrain, buildings, streets and main architecture characteristics
+						</li>
+						<li>
+							Participants from different areas of knowledge, like: arts, architecture, computer science
+						</li>
+					</p>
+
+				</div>
+			</div>
+			<div class="col-md-4">
+				<h2>Languages</h2>
+				<span class="language"> English </span> <i class="ti ti-more-alt lang-st"></i>
 			</div>
 		</div>
-		
-		<div class="row content">
-			<div class="col-sm-8 col-md-offset-2 text-left conteudo"> 
-				<div class="col-md-8">
-					<h2>Experience</h2>
-					<div class="row">
+	</div>
 
-						<hr style="border-top: dotted 1px;" />
-					</div>
-				</div>
-				<div class="col-md-4">
-					<h2>Languages</h2>
-					</hr>
-				</div>
-			</div>
-		</div>
-
-<footer class="container-fluid text-center">
-	<<small> <i class="ti ti-github" style="color: white;"></i><a href="https://github.com/guaiamum" style="color: white;"> My github</a> </small>
-</footer>
+	<footer class="container-fluid text-center">
+		<small> <i class="ti ti-github" style="color: white;"></i><a href="https://github.com/guaiamum" style="color: white;"> My github</a> </small>
+	</footer>
 
 </body>
 
