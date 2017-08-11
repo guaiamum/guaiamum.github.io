@@ -63,7 +63,8 @@
 
 		.lang-st {
 			font-size: 37px;
-		}
+        }
+        
 		.ti {
 			color: var(--accent-color);
 		}
@@ -75,8 +76,4 @@
 		footer {
 			color: white;
 			padding: 15px;
-		}
-
-		img {
-			float: right;
 		}
