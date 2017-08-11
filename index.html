@@ -13,92 +13,47 @@
 	<!-- JQuery -->
 	<script src="Vendor/jquery-3.2.1.min.js"></script>
 	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	 crossorigin="anonymous">
 	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+	 crossorigin="anonymous"></script>
 
 	<script>
-		$(document).ready(function() {
-			mudaCor('rgb(0,128,128)')
+		$(document).ready(function () {
+			var green = 'rgb(0, 180, 0)';
+			var teal = 'rgb(0,128,128)';
+
+			//mudaCor(teal);
+
+			pontos("EN")(4);
+			pontos("PT-BR")(5);
+
+			SetSize_Object(".circle", 17);
 		});
 
+		function pontos(language) {
+			return function (qtdPontos) {
+				for (var i = 0; i < qtdPontos; i++) {
+					$('#' + language).append('<div class="circle" style="background: var(--accent-color);"></div> &nbsp');
+				}
+				for (var i = qtdPontos; i < 5; i++) {
+					$('#' + language).append('<div class="circle" style="background: #333;"></div> &nbsp');
+				}
+			}
+		}
+
+		function SetSize_Object(object, size) {
+			$(object).css("width", size + "px");
+			$(object).css("height", size + "px");
+		}
+
 		function mudaCor(color) {
-			// var teal = 'rgb(0,128,128)'
 			$('body').css('--accent-color', color);
 		}
 	</script>
 
-	<style type="text/css">
-		:root {
-			--accent-color: rgb(0, 180, 0);
-		}
-
-		body {
-			background-color: #888888;
-			font-family: 'PT Sans';
-		}
-
-		#nome {
-			font-weight: bolder;
-			font-size: 40px;
-			margin-bottom: 0px;
-		}
-
-		#subtitle {
-			font-size: 20px;
-			font-weight: bold;
-			color: var(--accent-color);
-			padding: 3px;
-		}
-
-		.company {
-			font-size: 17px;
-			font-weight: bolder;
-			color: var(--accent-color);
-			padding-left: 3px;
-			margin-top: 0px;
-			margin-bottom: 0px;
-		}
-
-		.data-local {
-			font-size: 12px;
-		}
-
-		.conteudo {
-			background-color: #f1f1f1;
-			box-shadow: 3px 3px 5px black;
-		}
-
-		.sep-jobs {
-			border-top: dotted 5px;
-			color: #888888;
-		}
-
-		.language {
-			font-size: 17px;
-			font-weight: bolder;
-		}
-
-		.lang-st {
-			font-size: 37px;
-		}
-		.ti {
-			color: var(--accent-color);
-		}
-
-		a {
-			color: #888888;
-		}
-
-		footer {
-			color: white;
-			padding: 15px;
-		}
-
-		img {
-			float: right;
-		}
-	</style>
+	<link rel="stylesheet" href="Content/css/style.css" />
 </head>
 
 <body>
@@ -119,7 +74,10 @@
 					<i class="ti ti-location-pin"></i>Salvador, BA
 				</div>
 				<div class="col-md-6">
-					<i class="ti ti-linkedin"></i><a href="https://www.linkedin.com/in/cain%C3%A3-brazil-586379114/"> <u>Cainã Brazil</u></a>
+					<i class="ti ti-linkedin"></i>
+					<a href="https://www.linkedin.com/in/cain%C3%A3-brazil-586379114/">
+						<u>Cainã Brazil</u>
+					</a>
 				</div>
 
 			</div>
@@ -179,7 +137,8 @@
 					<p>
 						Multi-subject Federal University project
 						<li>
-							From ground zero made an entire virtual world of my University Campus, including terrain, buildings, streets and main architecture characteristics
+							From ground zero made an entire virtual world of my University Campus, including terrain, buildings, streets and main architecture
+							characteristics
 						</li>
 						<li>
 							Participants from different areas of knowledge, like: arts, architecture, computer science
@@ -190,11 +149,26 @@
 			</div>
 			<div class="col-md-4">
 				<h2>Languages</h2>
-				<span class="language"> English </span> <i class="ti ti-more-alt lang-st"></i>
+				<br/>
+
+				<div class="row content">
+					<div class="col-md-4">
+						<span class="language"> Português </span> </div>
+					<div class="col-md-8"> <span id="PT-BR"></span> </div>
+				</div>
+				<hr class="sep-langs" />
+
+				<div class="row content">
+					<div class="col-md-4"> <span class="language"> English </span> </div>
+					<div class="col-md-8"> <span id="EN"></span>
+					</div>
+				</div>
+				<hr class="sep-langs" />
 			</div>
 		</div>
 	</div>
 
+	
 	<footer class="container-fluid text-center">
 		<small> <i class="ti ti-github" style="color: white;"></i><a href="https://github.com/guaiamum" style="color: white;"> My github</a> </small>
 	</footer>
