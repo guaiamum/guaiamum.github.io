@@ -19,42 +19,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
 	 crossorigin="anonymous"></script>
 
-	<script>
-		$(document).ready(function () {
-			var green = 'rgb(0, 180, 0)';
-			var teal = 'rgb(0,128,128)';
-
-			//mudaCor(teal);
-
-			pontos("EN")(4);
-			pontos("PT-BR")(5);
-
-			SetSize_Object(".circle", 17);
-		});
-
-		function pontos(language) {
-			return function (qtdPontos) {
-				for (var i = 0; i < qtdPontos; i++) {
-					$('#' + language).append('<div class="circle" style="background: var(--accent-color);"></div> &nbsp');
-				}
-				for (var i = qtdPontos; i < 5; i++) {
-					$('#' + language).append('<div class="circle" style="background: #333;"></div> &nbsp');
-				}
-			}
-		}
-
-		function SetSize_Object(object, size) {
-			$(object).css("width", size + "px");
-			$(object).css("height", size + "px");
-		}
-
-		function mudaCor(color) {
-			$('body').css('--accent-color', color);
-		}
-
-		//string.replace(//g,' ') //replace globally
-	</script>
-
+	<script src="Content/js/front-end.js"></script>
 	<link rel="stylesheet" href="Content/css/style.css" />
 </head>
 
@@ -62,6 +27,22 @@
 
 	<div class="row content">
 		<div class="col-md-8 col-md-offset-2 text-left conteudo">
+
+			<div class="row content">
+				<div class="col-md-offset-11 col-md-2">
+					<a href="#" rel="popover" data-content="" data-trigger="focus">
+					    <i class="ti ti-angle-down"></i> Colors
+					</a>
+					<span class="hidden" id="muda-cor">
+						<div class="circle" id="green-circle"></div>
+						&nbsp
+						<div class="circle" id="teal-circle"></div>
+						&nbsp
+						<div class="circle" id="purple-circle"></div>
+					</span>
+				</div>
+			</div>
+
 			<div class="col-md-8">
 				<h1 id="nome"> Cainã Brazil Roriz </h1>
 				<p id="subtitle">Undergraduate in Computer Engineering</p>
@@ -159,21 +140,21 @@
 							Universidade Federal da Bahia
 						</p>
 						<small> <i class="ti ti-calendar"></i> Jan 2015 - ongoing </small>
-						<hr class="sep-md" /> 
+						<hr class="sep-md" />
 
 						<p class="education-title">Architecture and Urbanism</p>
 						<p class="institution">
 							Universidade Federal da Bahia
 						</p>
 						<small> <i class="ti ti-calendar"></i> Jan 2014 - Jan 2015 </small>
-						<hr class="sep-md" /> 
+						<hr class="sep-md" />
 
 						<p class="education-title">English for foreigners</p>
 						<p class="institution">
 							ILSC - English School
 						</p>
 						<small> <i class="ti ti-calendar"></i> Jan 2012 - Dec 2012 <i class="ti ti-location-pin"></i> San Francisco, CA</small>
-						<hr class="sep-md" /> 
+						<hr class="sep-md" />
 					</div>
 
 				</div>
