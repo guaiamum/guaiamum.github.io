@@ -11,13 +11,14 @@
 body {
 	font-family: 'Saira', sans-serif;
   padding-top: 3rem;
-	background: url("../image/background.jpg");
-	/*background: var(--plano-fundo);*/
+	/* background: url("../image/background.jpg"); */
+	background: var(--plano-fundo);
 }
 
 @media (max-width: 800px) {
     body {
-			background: url("../image/background-mobile.jpg");
+			background: var(--plano-fundo);
+			/* background: url("../image/background-mobile.jpg"); */
     }
 }
 
@@ -28,6 +29,11 @@ p,li {
 a {
 	color: var(--dark);
 }
+
+a:hover {
+	color: white;
+}
+
 .fadeInLoad {
 	/* slower animations */
 	-webkit-animation-duration: 4s;
@@ -84,14 +90,34 @@ a {
 	background: var(--white-alpha);
 }
 
-.contact {
+.contacts {
 	color: var(--dark);
 	padding: 20vh 0;
 	height: 800px;
+}
+
+.contact {
+	display: block;
+	margin: 20px;
+	padding: 40px;
+	box-shadow: 0 4px 4px 0 #212121, 0 4px 12px 0 #212121;
+}
+
+.contact:hover {
+	background-color: var(--dark-alpha);
 }
 
 .icon-love {
 	align: center;
 	width: 200px;
 	height: 200px;
+}
+
+/*for testing purposes*/
+.br {
+	border: 1px red solid;
+}
+/*for testing purposes*/
+.bg {
+	border: 1px yellowgreen solid;
 }
