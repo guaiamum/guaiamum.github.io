@@ -55,6 +55,10 @@ a:hover {
 	font-weight: bold;
 }
 
+.container-title{
+	padding-bottom: 5vh;
+}
+
 .hero {
   padding: 20vh 0;
   height: 100vh;
@@ -82,22 +86,28 @@ a:hover {
 }
 
 .academia {
+	padding-top: 10vh;
+	padding-bottom: 20vh;
   height: 800px;
 }
 
 .personal {
-	padding-bottom: 20px;
+	padding-top: 10vh;
+	padding-bottom: 20vh;
 	background: var(--white-alpha);
 }
 
 .contacts {
 	color: var(--dark);
-	padding: 20vh 0;
-	height: 800px;
+	padding-top: 10vh;
+	padding-bottom: 20vh;
+	/*padding: 20vh 0;*/
+	/*height: 800px;*/
 }
 
 .contact {
 	display: block;
+	text-align: center;
 	margin: 20px;
 	padding: 40px;
 	box-shadow: 0 4px 4px 0 #212121, 0 4px 12px 0 #212121;
