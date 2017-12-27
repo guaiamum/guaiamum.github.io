@@ -56,39 +56,59 @@ a:hover {
 }
 
 .container-title{
-	padding-bottom: 5vh;
+	padding-bottom: 2vh;
 }
 
 .hero {
   padding: 20vh 0;
-  height: 100vh;
+  height: 95vh;
 }
 
+/* JOB SECTION */
 .work {
   background: var(--white-alpha);
-  color: var(--dark);
-  padding-bottom: 20px;
+	color: snow;
+  padding: 10vh 0px 10vh 0px;
 }
 
-.job{
+.work h1{
 	color: var(--dark);
+	/*background: #00796b;*/
+}
+
+.job {
+	background: var(--dark-alpha);
 	font-family: 'Saira', sans-serif;
-	background: snow;
-	border-radius: 5px;
+	/*border-radius: 5px 0px 0px 5px;*/
 	padding: 10px;
 	margin-top: 40px;
 	box-shadow: 0 4px 8px 0 var(--dark), 0 6px 20px 0 var(--dark);
 	position: relative;
 }
 
-.jobs-container{
+.job-right{
 	margin-left: 10%;
 }
+@media (min-width: 800px) {
+	.job-right{
+		margin-left: 20%;
+	}
+}
 
+.job-left{
+	margin-right: 10%;
+}
+@media (min-width: 800px) {
+	.job-left{
+		margin-right: 20%;
+	}
+}
+
+/* ACADEMIA SECTION */
 .academia {
 	padding-top: 10vh;
 	padding-bottom: 20vh;
-  height: 800px;
+  min-height: 80vh;
 }
 
 .personal {
@@ -101,8 +121,6 @@ a:hover {
 	color: var(--dark);
 	padding-top: 10vh;
 	padding-bottom: 20vh;
-	/*padding: 20vh 0;*/
-	/*height: 800px;*/
 }
 
 .contact {
@@ -118,7 +136,8 @@ a:hover {
 }
 
 .icon-love {
-	align: center;
+	align-self: center;
+	display: block;
 	width: 200px;
 	height: 200px;
 }
