@@ -75,6 +75,6 @@ function loadInfo(user){
   });
 
   //END
-  hideLoader();
+  // hideLoader();
 
 }
