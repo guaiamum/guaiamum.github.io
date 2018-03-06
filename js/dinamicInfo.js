@@ -74,5 +74,7 @@ function loadInfo(user){
     container.append(div.append(circle,content));
   });
 
+  //END
+  hideLoader();
 
 }

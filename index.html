@@ -22,10 +22,13 @@
 
   <!-- OTHER -->
   <link rel="stylesheet" href="css/timeline.css">
+  <link rel="stylesheet" href="css/loader.css">
 
 </head>
 
 <body>
+  <div id="loader-background"><div id="loader"></div></div>
+
   <div class="row" id="only">
 
     <div class="col s12 l3 container" id="profile-nav">
@@ -150,7 +153,7 @@
                 <li class="me-big">SEMCOMP UFBA - 2017</li>
                 <li class="me-big-right">RoadSec - 2017</li>
                 <li class="me-big">JavaScript walkthrough IFBA - 2017</li>
-                <li class="me-big-right">TOEFL - 103 points</li>
+                <li class="me-big-right">TOEFL: 103 points</li>
               </ul>
             </div>
           </div>
@@ -170,8 +173,10 @@
 <script src="js/dinamicInfo.js"></script>
 <script src="js/materializeInit.js"></script>
 <script src="js/me.js"></script>
+<script src="js/loader.js"></script>
 <script>
   $(function() {
+    showLoader();
     loadInfo(me);
     tabs();
   })
