@@ -125,13 +125,6 @@ var me = {
       location: 'Salvador, BA',
     },
     {
-      title: 'High School',
-      name: 'Instituto Social da Bahia',
-      dateBegin: '1 B.C.',
-      dateEnd: '2013',
-      location: 'Salvador, BA',
-    },
-    {
       title: 'English School for international students',
       name: 'ILSC',
       dateBegin: 'fev 2012',
