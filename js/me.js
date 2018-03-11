@@ -90,7 +90,7 @@ var me = {
       dateEnd: 'Jun 2017',
       location: 'Salvador, BA',
       description: 'Viva Inovação is a startup company that develops technology solutions focused on increasing productivity.',
-      tasks: ['Learned basics MVC architecture and front-end developing using Razor, jQuery, Bootstrap, etc', 'Back-end development using C# with ASP.NET and PHP with Yii framework', 'Talked directly to costumers and provided support', 'Managed deployments and maintenance on server applicatications']
+      tasks: ['Learned basics MVC architecture and front-end developing using Razor, jQuery, Bootstrap, etc', 'Back-end development using C# with ASP.NET and PHP with Yii framework', 'Talked directly to customers and provided support', 'Managed deployments and maintenance on server applicatications']
       // 'Great progress in a major project inside the company (C# Asp.Net MVC5 SQLServer)','Maintenance in PHP Yii framework project (MySQL PhpMyAdmin)'
     }, {
       company: 'Ufba',
