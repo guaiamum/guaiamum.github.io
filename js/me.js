@@ -61,11 +61,15 @@ var me = {
   skillsWanted: [
     {
       title: '<img src="images/skills/want/python.png" alt="Python"/>',
-      description: 'Python: seems like a "do it all" simple programming language, with lots of frameworks'
+      description: 'Python: seems like a "do it all" simple programming language, with lots of libraries'
+    },
+    {
+      title: '<img src="images/skills/want/nodejs.png" alt="NodeJS"/>',
+      description: 'Back-end with JavaScript must be awesome!'
     },
     {
       title: '<img src="images/skills/want/lock.png" alt="Security"/>',
-      description: 'Network security'
+      description: 'Networking and security'
     },
     {
       title: '<img src="images/skills/want/all.png" class="spin" alt="Loading"/>',
