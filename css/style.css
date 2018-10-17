@@ -30,6 +30,10 @@ h5 {
   font-weight: bold;
 }
 
+section#experience, section#education {
+  overflow-x: hidden;
+}
+
 #only {
   margin: 0;
   padding: 0;
