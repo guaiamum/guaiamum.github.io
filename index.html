@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8"/>
@@ -34,7 +34,7 @@
     <div class="col s12 l3 container" id="profile-nav">
       <!-- NAVBAR PROFILE -->
       <div id="info">
-        <img class="circle" src="images/user.png" id="user-img" height="180px" width="180px">
+        <img class="circle" src="images/user.png" alt="User Avatar" id="user-img" height="180px" width="180px">
 
         <p id="profile-subtitle">Something</p>
         <p id="profile-name">Nome Sobrenome</p>
@@ -45,10 +45,10 @@
       </div>
 
       <footer>
-        <a><img class="circle" src="images/links/github.png" id="github-link"></a>
-        <a><img class="circle" src="images/links/instagram.png" id="instagram-link"></a>
-        <a><img class="circle" src="images/links/medium.png" id="medium-link"></a>
-        <a><img class="circle" src="images/links/linkedin.png" id="linkedin-link"></a>
+        <a aria-label="Github"><img class="circle" src="images/links/github.png" id="github-link" alt="Github Icon"></a>
+        <a aria-label="Instagram"><img class="circle" src="images/links/instagram.png" id="instagram-link" alt="Instagram Icon"></a>
+        <a aria-label="Medium"><img class="circle" src="images/links/medium.png" id="medium-link" alt="Medium Icon"></a>
+        <a aria-label="Linkedin"><img class="circle" src="images/links/linkedin.png" id="linkedin-link" alt="Linkedin Icon"></a>
       </footer>
     </div>
 
@@ -58,11 +58,11 @@
       <div class="col s12 tabs-container">
         <!-- TAB LINKS  -->
         <ul class="tabs tabs-fixed-width">
-          <li class="tab col s3"><a class="active" href="#me">Me</a></li>
-          <li class="tab col s3"><a href="#skills">Skills</a></li>
-          <li class="tab col s3"><a href="#experience">Experiences</a></li>
-          <li class="tab col s3"><a href="#education">Education</a></li>
-          <li class="tab col s3"><a href="#more"> <i class="material-icons">more_horiz</i></a></li>
+          <li class="tab col s3"><a class="active" href="#me" aria-label="Section Me">Me</a></li>
+          <li class="tab col s3"><a href="#skills" aria-label="Section Skills">Skills</a></li>
+          <li class="tab col s3"><a href="#experience" aria-label="Section Experiences">Experiences</a></li>
+          <li class="tab col s3"><a href="#education" aria-label="Section Education">Education</a></li>
+          <li class="tab col s3"><a href="#more" aria-label="Section More"> <i class="material-icons">more_horiz</i></a></li>
         </ul>
       </div>
 
@@ -99,7 +99,7 @@
 
         <section id="experience" class="col s12">
           <div class="row xps-container" id="experiences">
-            <div id="cd-timeline" class="cd-container amarelo">
+            <div class="cd-timeline cd-container amarelo">
             </div>
           </div>
 
@@ -124,7 +124,7 @@
 
         <section id="education" class="col s12">
           <div class="row">
-            <div id="cd-timeline" class="cd-container verde">
+            <div class="cd-timeline cd-container verde">
             </div>
           </div>
           <!-- <div class="row edu-container" id="schools"></div> -->
