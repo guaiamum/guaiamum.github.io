@@ -13,7 +13,7 @@ var me = {
     },
     {
       id: '#medium-link',
-      href: "https://medium.com/@cainbrazil"
+      href: "https://medium.com/@guaiamum"
     },
     {
       id: '#linkedin-link',
