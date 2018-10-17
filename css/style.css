@@ -11,6 +11,7 @@
   --accent-one-dark: #1f601f;
   --accent-two: #F7E418;
   --accent-two-dark: #9E8C32;
+  --gray-light: #BABABA;
 }
 
 body {
@@ -78,7 +79,7 @@ h5 {
 
 #profile-subtitle {
   font-size: 10pt;
-  color: gray;
+  color: var(--gray-light);
   margin: 2px;
 }
 
@@ -248,23 +249,6 @@ h5 {
 /* ************** */
 
 /* EXPERIENCES SECTION */
-/*.job-title {
-  font-size: 26pt;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
- .job-location, .job-duration {
-  font-size: 9pt;
-}
-
-.job-description {
-  font-size: 14pt;
-}
-
-.job-tasks {
-  font-size: 12pt;
-} */
 
 /* ************** */
 /* EDUCATION SECTION */

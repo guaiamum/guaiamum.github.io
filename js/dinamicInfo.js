@@ -32,7 +32,7 @@ function loadInfo(user){
 
 // EXPERIENCES
   user.jobs.forEach((e,i) => {
-    var container = $('#experiences').find('#cd-timeline');
+    var container = $('#experiences').find('.cd-timeline');
 
     var div = $('<div>',{class: 'cd-timeline-block'});
     var circle = $('<div>',{class: 'cd-timeline-img amarelo'}); //YELLOW
@@ -56,7 +56,7 @@ function loadInfo(user){
 
 // EDUCATION
   user.schools.forEach((e,i) => {
-    var container = $('#education').find('#cd-timeline');
+    var container = $('#education').find('.cd-timeline');
 
     var div = $('<div>',{class: 'cd-timeline-block'});
     var circle = $('<div>',{class: 'cd-timeline-img verde'}); //GREEN
