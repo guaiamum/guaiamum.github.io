@@ -1,7 +1,6 @@
 import { h } from 'preact';
 
 const baseSvgPath = '../../assets/icons';
-
 const links = ['github', 'instagram', 'medium', 'linkedin'];
 
 export default ({ classes, name, subtitle, img, ...otherProps }) => (

@@ -1,14 +1,15 @@
-const path = require('path');
+const { join } = require('path');
+const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     target: 'web',
-    context: path.join(__dirname, 'src'),
+    context: join(__dirname, 'src'),
     entry: [
         './index.js',
         './styles/main.scss',
     ],
     output: {
-        path: path.join(__dirname, 'dist'),
+        path: join(__dirname, 'dist'),
         filename: 'app.js',
     },
     module: {
@@ -27,11 +28,25 @@ module.exports = {
                     { loader: 'sass-loader' },
                 ],
             },
+            {
+                test: /\.html$/,
+                use: [
+                    {
+                        loader: 'html-loader',
+                    },
+                ],
+            },
         ],
     },
     resolve: {
         modules: [
-            path.join(__dirname, 'node_modules'),
+            join(__dirname, 'node_modules'),
         ],
     },
+    plugins: [
+        new HtmlWebPackPlugin({
+            template: './template/index.html',
+            filename: './index.html',
+        }),
+    ],
 };
