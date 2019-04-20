@@ -3,3 +3,7 @@
 
 # VSCODE
 .vscode
+
+node_modules
+
+dist
