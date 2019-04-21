@@ -10,20 +10,18 @@ export default ({ ...otherProps }) => (
             <ul class="tabs tabs-fixed-width">
                 {
                     tabs.map((val, idx) => {
-                        let li;
                         if (typeof val === 'string') {
-                            li = <li class="tab col s3">
+                            return <li class="tab col s3">
                                 <a {...idx === 0 && { class: 'active' }} href={`#${val}`} aria-label={`Section ${val}`}>{ val }</a>
-                            </li>;
-                        } else {
-                            const key = Object.keys(val)[0];
-                            const el = val[key];
-                            li = <li class="tab col s3">
-                                <a {...idx === 0 && { class: 'active' }} href={`#${key}`} aria-label={`Section ${key}`}>{ el }</a>
                             </li>;
                         }
 
-                        return li;
+                        const key = Object.keys(val)[0];
+                        const el = val[key];
+
+                        return <li class="tab col s3">
+                            <a {...idx === 0 && { class: 'active' }} href={`#${key}`} aria-label={`Section ${key}`}>{ el }</a>
+                        </li>;
                     })
                 }
             </ul>
