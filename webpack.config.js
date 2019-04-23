@@ -2,11 +2,11 @@ const { join } = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-module.exports = {
+module.exports = (env, argv) => ({
     target: 'web',
     context: join(__dirname, 'src'),
     entry: [
-        './index.js',
+        './entry.js',
         './styles/main.scss',
     ],
     output: {
@@ -19,7 +19,7 @@ module.exports = {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 use: [
-                    'babel-loader',
+                    { loader: 'babel-loader' },
                 ],
             },
             {
@@ -35,6 +35,32 @@ module.exports = {
                 use: [
                     {
                         loader: 'html-loader',
+                        options: {
+                            minimize: argv.mode !== 'development',
+                        },
+                    },
+                ],
+            },
+            {
+                test: /\.svg$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[hash:8].[ext]',
+                            outputPath: './icons/',
+                        },
+                    },
+                ],
+            },
+            {
+                test: /\.ico$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                        },
                     },
                 ],
             },
@@ -49,4 +75,4 @@ module.exports = {
             filename: './style.css',
         }),
     ],
-};
+});

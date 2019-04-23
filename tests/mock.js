@@ -1,25 +1,31 @@
-export const me = {
-    // PROFILE
-    name: 'Cainã Brazil',
-    subtitle: 'Undergraduate in Computer Engineering',
-    thumbnail: 'images/me.jpg',
-    links: [{
-        id: '#github-link',
-        href: 'https://github.com/guaiamum',
+export default {
+    profile: {
+        name: 'Cainã Brazil',
+        subtitle: 'Undergraduate in Computer Engineering',
+        thumbnail: 'images/me.jpg',
+        links: [
+            {
+                name: 'github',
+                id: '#github-link',
+                url: 'https://github.com/guaiamum',
+            },
+            {
+                name: 'instagram',
+                id: '#instagram-link',
+                url: 'https://www.instagram.com/_guaiamum/',
+            },
+            {
+                name: 'medium',
+                id: '#medium-link',
+                url: 'https://medium.com/@guaiamum',
+            },
+            {
+                name: 'linkedin',
+                id: '#linkedin-link',
+                url: 'https://www.linkedin.com/in/cainã-brazil-586379114/',
+            },
+        ],
     },
-    {
-        id: '#instagram-link',
-        href: 'https://www.instagram.com/_guaiamum/',
-    },
-    {
-        id: '#medium-link',
-        href: 'https://medium.com/@guaiamum',
-    },
-    {
-        id: '#linkedin-link',
-        href: 'https://www.linkedin.com/in/cainã-brazil-586379114/',
-    },
-    ],
     // SKILLS
     skills: [{
         title: 'C#',
