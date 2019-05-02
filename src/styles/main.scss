@@ -1,3 +1,10 @@
-@import 'all';
 
+// Placeholders
+@import 'placeholders/colors';
+
+// Components
 @import 'components/timeline';
+@import 'components/profile';
+@import 'components/tabs';
+
+@import 'all';

@@ -12,7 +12,7 @@ module.exports = (env, argv) => ({
     ],
     output: {
         path: join(__dirname, 'dist'),
-        filename: 'app.js',
+        filename: 'app.[hash:8].js',
     },
     module: {
         rules: [
@@ -73,7 +73,7 @@ module.exports = (env, argv) => ({
             filename: './index.html',
         }),
         new MiniCssExtractPlugin({
-            filename: './style.css',
+            filename: './style.[hash:8].css',
         }),
         new OptimizeCssAssetsPlugin(),
     ],

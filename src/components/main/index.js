@@ -1,32 +1,10 @@
 import { h } from 'preact';
-
-const tabs = ['me', 'skills', 'experience', 'education', { more: <i class="material-icons">more_horiz</i> }];
+import Tabs from './tabs';
 
 export default ({ ...otherProps }) => (
 
-    <div class="col s12 l9" id="main">
-
-        <div class="col s12 tabs-container">
-            <ul class="tabs tabs-fixed-width">
-                {
-                    tabs.map((val, idx) => {
-                        if (typeof val === 'string') {
-                            return <li class="tab col s3">
-                                <a {...idx === 0 && { class: 'active' }} href={`#${val}`} aria-label={`Section ${val}`}>{ val }</a>
-                            </li>;
-                        }
-
-                        const key = Object.keys(val)[0];
-                        const el = val[key];
-
-                        return <li class="tab col s3">
-                            <a {...idx === 0 && { class: 'active' }} href={`#${key}`} aria-label={`Section ${key}`}>{ el }</a>
-                        </li>;
-                    })
-                }
-            </ul>
-        </div>
-
+    <main class="col s12 l9" id="main">
+        <Tabs />
         <div class="row" id="main-content">
 
             <section class="row" id="me">
@@ -37,13 +15,13 @@ export default ({ ...otherProps }) => (
 
             </section>
 
-            <section id="skills" class="col s12">
-                <h5>SKILLS I HAVE</h5>
+            <section id="skills" class="col s12 skills">
+                <h5 class="ttl">SKILLS I HAVE</h5>
                 <div class="row">
                     <div class="skills-container" id="skills-have" />
                 </div>
 
-                <h5>SKILLS I WANT TO LEARN</h5>
+                <h5 class="ttl">SKILLS I WANT TO LEARN</h5>
                 <div class="row">
                     <div class="skills-container" id="skills-want" />
                 </div>
@@ -88,5 +66,5 @@ export default ({ ...otherProps }) => (
             </section>
 
         </div>
-    </div>
+    </main>
 );

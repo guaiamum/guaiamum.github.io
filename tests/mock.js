@@ -2,7 +2,7 @@ export default {
     profile: {
         name: 'Cainã Brazil',
         subtitle: 'Undergraduate in Computer Engineering',
-        thumbnail: 'images/me.jpg',
+        img: 'https://media.licdn.com/dms/image/C4D03AQH2wf6X1OyxVw/profile-displayphoto-shrink_200_200/0?e=1562198400&v=beta&t=BGgqQj3rkCx6ogcaM6_cOF3QXKnFn1AD8sImbzd1VOk',
         links: [
             {
                 name: 'github',

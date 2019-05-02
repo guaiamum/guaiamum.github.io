@@ -1,0 +1,33 @@
+
+/* TABS STYLING */
+// @TODO implement this with radio buttons
+.tabs-container {
+    position: sticky;
+    top: 0;
+    background-color: map-get($colors, "main-fade");
+    // @TODO: find out how to override materialize grid padding settings
+    padding: 0 !important;
+  
+    .tabs {
+      background-color: inherit;
+  
+      .indicator {
+        display: none;
+      }
+  
+      i.material-icons {
+        /*ADJUSTS ICONS*/
+        margin-top: 0.5em;
+      }
+  
+      a {
+        @extend %color-third;
+  
+        &.active {
+          font-weight: bold;
+          @extend %background-color-main;
+          border-top: 3px solid map-get($colors, "third");
+        }
+      }
+    }
+  }

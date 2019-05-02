@@ -37,6 +37,6 @@
   "scripts": {
     "start": "webpack-dev-server --open --mode=development",
     "watch": "webpack --mode=development --watch",
-    "build": "rm -r dist/*; webpack --mode=production"
+    "build": "webpack --mode=production"
   }
 }
