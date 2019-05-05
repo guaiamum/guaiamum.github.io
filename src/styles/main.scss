@@ -1,3 +1,5 @@
+// Normalize
+@import 'normalize';
 
 // Placeholders
 @import 'placeholders/colors';
@@ -6,5 +8,8 @@
 @import 'components/timeline';
 @import 'components/profile';
 @import 'components/tabs';
+
+// Layout
+@import 'layout/skills';
 
 @import 'all';
