@@ -1,37 +1,38 @@
-/* TABS STYLING */
+// TABS STYLING
+
 // @TODO implement this with radio buttons
 .tabs-container {
   position: sticky;
   top: 0;
-  background-color: map-get($colors, "main-fade");
-  // @TODO: find out how to override materialize grid padding settings
-  padding: 0 !important;
+  @extend %background-color-main-fade;
 
   .tabs {
-    display: flex;
-    background-color: inherit;
-
-    .indicator {
-      display: none;
-    }
-
-    // i.material-icons {
-    //   /*ADJUSTS ICONS*/
-    //   margin-top: 0.5em;
-    // }
+	display: flex;
+	min-height: 42px; // touchable tabs
 
     .tab {
       flex: 1;
-      text-align: center;
+      @extend %display-flex;
+      align-items: center;
+      justify-content: center;
       text-transform: uppercase;
-      padding-top: 4px; 
+      //   padding-top: 4px;
       font-size: 14px; // @todo: em or rem?
       @extend %color-third;
+      position: relative;
 
-      &.active {
+      &._act {
         font-weight: bold;
         @extend %background-color-main;
-        border-top: 3px solid map-get($colors, "third");
+
+        &::before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          content: "";
+          width: 100%;
+          border-top: 3px solid map-get($colors, "third");
+        }
       }
     }
   }
