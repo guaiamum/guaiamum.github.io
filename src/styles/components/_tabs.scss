@@ -2,34 +2,39 @@
 
 // @TODO implement this with radio buttons
 .tabs-container {
-  position: sticky;
-  top: 0;
+  @extend %position-sticky;
+  @extend %top-0;
   @extend %background-color-main-fade;
 
   .tabs {
-	display: flex;
-	min-height: 42px; // touchable tabs
+    @extend %display-flex;
+    min-height: 42px; // touchable tabs
+    cursor: pointer;
 
     .tab {
-      flex: 1;
+      @extend %flex-1;
       @extend %display-flex;
-      align-items: center;
-      justify-content: center;
+      @extend %align-items-center;
+      @extend %justify-content-center;
       text-transform: uppercase;
-      //   padding-top: 4px;
       font-size: 14px; // @todo: em or rem?
       @extend %color-third;
-      position: relative;
+      @extend %position-relative;
+
+      &._act,
+      &:focus {
+		@extend %background-color-main;
+		outline: none;
+      }
 
       &._act {
         font-weight: bold;
-        @extend %background-color-main;
 
         &::before {
-          position: absolute;
-          top: 0;
-          left: 0;
-          content: "";
+          @extend %position-absolute;
+          @extend %top-0;
+          @extend %left-0;
+          @extend %content-empty;
           width: 100%;
           border-top: 3px solid map-get($colors, "third");
         }

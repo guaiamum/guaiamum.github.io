@@ -1,46 +1,43 @@
-/* ************** */
+// NAVBAR PROFILE
 
-/* NAVBAR PROFILE */
-
-#profile-nav {
+.profile {
   @extend %background-color-second;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  width: 30%;
-  align-items: center;
-  justify-items: center;
-}
+  @extend %display-flex;
+  @extend %flex-direction-column;
+  @extend %align-items-center;
+  text-align: center;
+  padding: 0 64px;
 
-// @media (max-width: 700px) {
-//   #profile-nav {
-//     min-height: 90vh;
-//     max-width: 100vw;
-//   }
-// }
+  @include onMobile() {
+    min-height: 90vh;
+    width: 100vw;
+  }
 
-#profile-nav #info {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
+  .hdr {
+    @extend %flex-1;
+    @extend %display-flex;
+    @extend %flex-direction-column;
+    @extend %align-items-center;
+    @extend %justify-content-center;
 
-#profile-nav footer img {
-  height: 35px;
-  width: 35px;
-  margin: 5px;
-}
+    .subtitle {
+      font-size: 10pt;
+      color: map-get($colors, "gray-light");
+    }
 
-#profile-subtitle {
-  font-size: 10pt;
-  color: map-get($colors, 'gray-light');
-  margin: 2px;
-}
+    .name {
+      white-space: nowrap;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 24pt;
+    }
+  }
 
-#profile-name {
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 24pt;
+  .ftr {
+    @extend %display-flex;
+
+    .link ~ .link {
+      margin-left: 8px;
+    }
+  }
 }

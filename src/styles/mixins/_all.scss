@@ -1,0 +1,6 @@
+// Mobile First - jk
+@mixin onMobile {
+  @media only screen and (max-width: 900px) {
+    @content;
+  }
+}

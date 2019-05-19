@@ -19,7 +19,11 @@ export default ({ tabs = tabsDefault, cbx }) => (
         <ul class="tabs">
             {
                 tabs.map(({ key, content }, idx) => (
-                    <li class={`tab${active === key ? ' _act' : ''}`} onClick={() => { active = key; cbx(key); }} >
+                    <li
+                        class={`tab${active === key ? ' _act' : ''}`}
+                        onClick={() => { active = key; cbx(key); }} // @todo: change to radio-button
+                        tabIndex="0"
+                    >
                         { content || key }
                     </li>
                 ))

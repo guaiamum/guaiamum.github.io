@@ -1,13 +1,19 @@
 // Normalize
 @import 'normalize';
 
+// Mixins
+@import 'mixins/all';
+
 // Placeholders
-@import 'placeholders/colors';
+@import 'placeholders/all';
 
 // Components
 @import 'components/timeline';
 @import 'components/profile';
 @import 'components/tabs';
+
+// Helpers
+@import 'helpers/all';
 
 // Layout
 @import 'layout/skills';
