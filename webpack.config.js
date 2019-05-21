@@ -3,10 +3,17 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const context = join(__dirname, 'src');
 
-module.exports = (env, argv) => ({
+module.exports = (env, { mode }) => ({
+    resolve: {
+        extensions: ['.js'],
+        alias: {
+            Components: join(context, './components'),
+        },
+    },
     target: 'web',
-    context: join(__dirname, 'src'),
+    context,
     entry: [
         './entry.js',
         './styles/main.scss',
@@ -38,7 +45,7 @@ module.exports = (env, argv) => ({
                     {
                         loader: 'html-loader',
                         options: {
-                            minimize: argv.mode !== 'development',
+                            minimize: mode !== 'development',
                         },
                     },
                 ],
@@ -72,7 +79,7 @@ module.exports = (env, argv) => ({
         new CleanWebpackPlugin(),
         new HtmlWebPackPlugin({
             template: './template/index.html',
-            filename: './index.html',
+            favicon: './assets/favicon.ico',
         }),
         new MiniCssExtractPlugin({
             filename: './style.[hash:8].css',

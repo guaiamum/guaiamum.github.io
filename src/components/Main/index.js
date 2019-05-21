@@ -1,6 +1,6 @@
 import { h, Component } from 'preact';
+import sections from 'Components/Sections';
 import Tabs from './tabs';
-import mapper from '../Sections';
 
 export default class Main extends Component {
     /**
@@ -29,7 +29,7 @@ export default class Main extends Component {
      * @returns {JSX}
      */
     render ({ ...otherProps }, { section }) {
-        const ComponentToRender = mapper[section];
+        const ComponentToRender = sections[section];
         return (
             <main>
                 <Tabs cbx={this.propToRender} />

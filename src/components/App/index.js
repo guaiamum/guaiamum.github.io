@@ -1,6 +1,6 @@
 import { h, Fragment } from 'preact';
-import Profile from '../Profile';
-import Main from '../Main';
+import Profile from 'Components/Profile';
+import Main from 'Components/Main';
 
 export default ({ profile, main }) => (
     <Fragment>
