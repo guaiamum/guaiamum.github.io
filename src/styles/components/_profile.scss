@@ -26,9 +26,9 @@
     }
 
     .name {
-      white-space: nowrap;
-      text-transform: uppercase;
-      font-weight: bold;
+      @extend %white-space-nowrap;
+      @extend %text-transform-uppercase;
+      @extend %font-weight-bold;
       font-size: 24pt;
     }
   }
