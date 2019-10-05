@@ -1,0 +1,13 @@
+.-upp {
+    @extend %text-transform-uppercase;
+}
+
+.-b {
+    @extend %font-weight-bold;
+}
+  
+@each $size, $value in $fonts {
+    .-fs#{$size} {
+        @extend %font-size-#{$size};
+    }
+}

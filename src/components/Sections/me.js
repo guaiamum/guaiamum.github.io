@@ -5,9 +5,7 @@ import { h } from 'preact';
  * @returns {JSX}
  */
 export default (props) => (
-    <section id="me" class="row">
-        <div class="row">
-            <p class="me-small">I believe in <span class="me-big">Simplicity</span></p>
-        </div>
+    <section class="-df -i-ctr -phm">
+        <p class="-upp -fs24">I believe in <span class="-b -fs29">Simplicity</span></p>
     </section>
 );

@@ -13,3 +13,9 @@
 %white-space-nowrap {
   white-space: nowrap;
 }
+
+@each $size, $value in $fonts {
+    %font-size-#{$size} {
+        font-size: $value;
+    }
+}

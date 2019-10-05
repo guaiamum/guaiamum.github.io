@@ -1,31 +1,25 @@
 #root {
-  // Normalize
-  font-family: "Roboto";
-  box-sizing: border-box;
-  // Pirilimpimpim
-  @extend %background-color-second;
-  @extend %color-third;
-  height: 100vh;
-  @extend %display-flex;
+    // Normalize
+    font-family: "Roboto";
+    // Pirilimpimpim
+    @extend %background-color-second;
+    @extend %color-third;
+    height: 100vh;
+    @extend %display-flex;
 
-  @include onMobile() {
-    flex-wrap: wrap;
-  }
+    @include onMobile() {
+        flex-wrap: wrap;
+    }
 }
 
 main {
-  @extend %background-color-main;
-  height: 100%;
-  width: 100%;
-  overflow-y: scroll;
-}
+    @extend %background-color-main;
+    @extend %width-100-percent;
+    @extend %height-100-percent;
+    overflow-y: scroll;
 
-/* ************** */
-
-/* ME SECTION */
-
-#me .row {
-  text-transform: uppercase;
-  padding: 10px;
-  padding-top: 40vh;
+    > section {
+        min-height: calc(100% - 42px);
+        // min-height: calc(100% - $tab-height);
+    }
 }

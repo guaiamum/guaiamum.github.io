@@ -7,5 +7,9 @@
 @import "placeholders/typography";
 
 %content-empty {
-  content: "";
+    content: "";
+}
+
+%cursor-pointer {
+    cursor: pointer;
 }

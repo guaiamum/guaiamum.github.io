@@ -4,3 +4,13 @@ I've designed all the HTML / CSS / JavaScript in this page, may have gotten some
 
 
 <a href="https://guaiamum.github.io/"> Go to page</a>
+
+# To run locally:
+
+Clone it, run `yarn` on your command line, then `yarn start:open` to start a dev server and open the webpage with auto refresh space technology.
+
+# License and contributing:
+
+MIT, meaning a bunch of things, but feel free to fork it and use it as you please!
+
+PR's are also welcome, just open and issue first, and we can discuss the solution ;)

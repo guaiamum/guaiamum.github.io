@@ -4,11 +4,8 @@ import { h } from 'preact';
  * @param {Object} props
  * @returns {JSX}
  */
-export default (props) => (
+export default ({ schools }) => (
     <section class="">
-        EDU
-        <div class="row">
-            <div class="cd-timeline cd-container verde" />
-        </div>
+        Did u really expect this one not to be in progress?
     </section>
 );

@@ -1,43 +1,50 @@
 // NAVBAR PROFILE
 
 .profile {
-  @extend %background-color-second;
-  @extend %display-flex;
-  @extend %flex-direction-column;
-  @extend %align-items-center;
-  text-align: center;
-  padding: 0 64px;
-
-  @include onMobile() {
-    min-height: 90vh;
-    width: 100vw;
-  }
-
-  .hdr {
-    @extend %flex-1;
+    @extend %background-color-second;
     @extend %display-flex;
     @extend %flex-direction-column;
     @extend %align-items-center;
-    @extend %justify-content-center;
-
-    .subtitle {
-      font-size: 10pt;
-      color: map-get($colors, "gray-light");
+    @extend %text-align-center;
+    @extend %padding-bottom-small;
+    width: 30vw;
+  
+    @include onMobile() {
+        min-height: 85vh;
+        width: 100vw;
     }
 
-    .name {
-      @extend %white-space-nowrap;
-      @extend %text-transform-uppercase;
-      @extend %font-weight-bold;
-      font-size: 24pt;
-    }
-  }
+    .hdr {
+        @extend %flex-1;
+        @extend %display-flex;
+        @extend %flex-direction-column;
+        @extend %align-items-center;
+        @extend %justify-content-center;
 
-  .ftr {
-    @extend %display-flex;
+        .subtitle {
+            @extend %font-size-14;
+            @extend %color-gray-light;
+        }
 
-    .link ~ .link {
-      margin-left: 8px;
+        .name {
+            @extend %white-space-nowrap;
+            @extend %text-transform-uppercase;
+            @extend %font-weight-bold;
+            @extend %font-size-29;
+        }
     }
-  }
+
+    .ftr {
+        @extend %display-flex;
+
+        .link {
+            img {
+                @extend %border-radius-100-percent;
+            }
+
+            & ~ .link {
+                @extend %margin-left-small;
+            }
+        }
+    }
 }

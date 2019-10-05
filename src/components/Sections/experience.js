@@ -4,11 +4,8 @@ import { h } from 'preact';
  * @param {Object} props
  * @returns {JSX}
  */
-export default (props) => (
+export default ({ jobs }) => (
     <section class="">
-        XP
-        <div class="row xps-container" id="experiences">
-            <div class="cd-timeline cd-container amarelo" />
-        </div>
+        also in progress
     </section>
 );

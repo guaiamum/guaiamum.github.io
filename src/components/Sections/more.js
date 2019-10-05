@@ -5,29 +5,25 @@ import { h } from 'preact';
  * @returns {JSX}
  */
 export default (props) => (
-    <section id="more" class="col s12">
-        <div class="row">
-            <div class="col s12 offset-l2 l8">
-                <p class="me-small">Areas of Interest</p>
-                <ul>
-                    <li class="me-big">User experience</li>
-                    <li class="me-big-right">Open Source</li>
-                    <li class="me-big">Artificial Inteligence</li>
-                    <li class="me-big-right">Security</li>
-                </ul>
-            </div>
-        </div>
+    <section class="-phm">
+        <article class="-pvm">
+            <h2 class="-upp">Areas of Interest</h2>
+            <ul class="-fs20">
+                <li>User experience</li>
+                <li>Open Source</li>
+                <li>Artificial Inteligence</li>
+                <li>Security</li>
+            </ul>
+        </article>
 
-        <div class="row margem-cima">
-            <div class="col s12 offset-l2 l8">
-                <p class="me-small">Courses and certificates</p>
-                <ul>
-                    <li class="me-big">SEMCOMP UFBA - 2017</li>
-                    <li class="me-big-right">RoadSec - 2017</li>
-                    <li class="me-big">JavaScript walkthrough IFBA - 2017</li>
-                    <li class="me-big-right">TOEFL: 103 points</li>
-                </ul>
-            </div>
-        </div>
+        <article class="-pvm">
+            <h2 class="-upp">Courses and certificates</h2>
+            <ul class="-fs20">
+                <li>SEMCOMP UFBA - 2017</li>
+                <li>RoadSec - 2017</li>
+                <li>JavaScript walkthrough IFBA - 2017</li>
+                <li>TOEFL: 103 points</li>
+            </ul>
+        </article>
     </section>
 );

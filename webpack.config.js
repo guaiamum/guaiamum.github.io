@@ -51,13 +51,13 @@ module.exports = (env, { mode }) => ({
                 ],
             },
             {
-                test: /\.svg$/,
+                test: /\.(svg|jpe?g|png)$/,
                 use: [
                     {
                         loader: 'file-loader',
                         options: {
                             name: '[hash:8].[ext]',
-                            outputPath: './icons/',
+                            outputPath: './assets/',
                         },
                     },
                 ],
@@ -74,6 +74,10 @@ module.exports = (env, { mode }) => ({
                 ],
             },
         ],
+    },
+    devServer: {
+        compress: true,
+        disableHostCheck: true,
     },
     plugins: [
         new CleanWebpackPlugin(),

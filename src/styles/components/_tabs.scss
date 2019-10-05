@@ -1,4 +1,5 @@
 // TABS STYLING
+$tab-height: 42px;
 
 // @TODO implement this with radio buttons
 .tabs {
@@ -6,8 +7,8 @@
   @extend %top-0;
   @extend %background-color-main-fade;
   @extend %display-flex;
-  min-height: 42px; // touchable tabs
-  cursor: pointer;
+  @extend %width-100-percent;
+  min-height: $tab-height; // touchable tabs
 
   .tab {
     background: inherit;
@@ -15,28 +16,30 @@
     @extend %display-flex;
     @extend %align-items-center;
     @extend %justify-content-center;
-    text-transform: uppercase;
-    font-size: 14px; // @todo: em or rem?
+    @extend %text-transform-uppercase;
+    @extend %font-size-14;
     @extend %color-third;
     @extend %position-relative;
 
-    &._act,
     &:hover,
     &:focus {
-      font-weight: bold;
+        @extend %font-weight-bold;
+        @extend %cursor-pointer;
     }
 
     &._act {
-      @extend %background-color-main;
+        @extend %font-weight-bold;
+        @extend %cursor-pointer;
+        @extend %background-color-main;
 
-      &::before {
-        @extend %position-absolute;
-        @extend %top-0;
-        @extend %left-0;
-        @extend %content-empty;
-        width: 100%;
-        border-top: 3px solid map-get($colors, "third");
-      }
+        &::before {
+            @extend %position-absolute;
+            @extend %top-0;
+            @extend %left-0;
+            @extend %content-empty;
+            @extend %border-top-3px-third;
+            @extend %width-100-percent;;
+        }
     }
   }
 }
