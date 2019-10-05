@@ -1,9 +1,0 @@
-# Mac file
-.DS_Store
-
-# VSCODE
-.vscode
-
-node_modules
-
-dist
