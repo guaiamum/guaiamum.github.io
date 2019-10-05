@@ -1,0 +1,11 @@
+@import "./typography";
+@import "./flex";
+@import "./spaces";
+
+.-circl {
+    @extend %border-radius-100-percent;
+}
+
+.-fw {
+    @extend %width-100-percent;
+}

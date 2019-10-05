@@ -1,0 +1,25 @@
+#root {
+    // Normalize
+    font-family: "Roboto";
+    // Pirilimpimpim
+    @extend %background-color-second;
+    @extend %color-third;
+    height: 100vh;
+    @extend %display-flex;
+
+    @include onMobile() {
+        flex-wrap: wrap;
+    }
+}
+
+main {
+    @extend %background-color-main;
+    @extend %width-100-percent;
+    @extend %height-100-percent;
+    overflow-y: scroll;
+
+    > section {
+        min-height: calc(100% - 42px);
+        // min-height: calc(100% - $tab-height);
+    }
+}
