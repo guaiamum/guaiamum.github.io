@@ -1,12 +1,13 @@
 import { h } from 'preact';
 import classNames from 'classnames';
+import Icon from 'Components/Icon';
 
 const tabsDefault = [
     { key: 'me', active: true },
     { key: 'skills' },
     { key: 'experience' },
     { key: 'education' },
-    { key: 'more', content: <i class="material-icons">more_horiz</i> },
+    { key: 'more', content: <Icon name="more" /> },
 ];
 
 let active = 'me';

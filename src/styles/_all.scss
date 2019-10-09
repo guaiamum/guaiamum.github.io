@@ -2,8 +2,8 @@
     // Normalize
     font-family: "Roboto";
     // Pirilimpimpim
-    @extend %background-color-second;
-    @extend %color-third;
+    @extend %background-color-darker-green;
+    @extend %color-white;
     height: 100vh;
     @extend %display-flex;
 
@@ -19,7 +19,6 @@ main {
     overflow-y: scroll;
 
     > section {
-        min-height: calc(100% - 42px);
-        // min-height: calc(100% - $tab-height);
+        min-height: calc(100% - #{$tab-height});
     }
 }

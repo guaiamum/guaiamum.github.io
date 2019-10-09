@@ -3,6 +3,7 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 const context = join(__dirname, 'src');
 
 module.exports = (env, { mode }) => ({
@@ -10,6 +11,7 @@ module.exports = (env, { mode }) => ({
         extensions: ['.js'],
         alias: {
             Components: join(context, './components'),
+            Assets: join(context, './assets'),
         },
     },
     target: 'web',
@@ -51,7 +53,7 @@ module.exports = (env, { mode }) => ({
                 ],
             },
             {
-                test: /\.(svg|jpe?g|png)$/,
+                test: /\.(jpe?g|png)$/,
                 use: [
                     {
                         loader: 'file-loader',
@@ -61,6 +63,14 @@ module.exports = (env, { mode }) => ({
                         },
                     },
                 ],
+            },
+            {
+                test: /\.svg$/,
+                loader: 'svg-sprite-loader',
+                options: {
+                    extract: true,
+                    spriteFilename: 'assets/sprite.svg', // .[hash:4]
+                },
             },
             {
                 test: /\.ico$/,
@@ -89,5 +99,6 @@ module.exports = (env, { mode }) => ({
             filename: './style.[hash:8].css',
         }),
         new OptimizeCssAssetsPlugin(),
+        new SpriteLoaderPlugin({ plainSprite: true }),
     ],
 });

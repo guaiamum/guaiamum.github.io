@@ -10,6 +10,7 @@ module.exports = {
     globals: {
         fetch: true,
         Promise: true,
+        __webpack_public_path__: true,
     },
     rules: {
         'import/no-extraneous-dependencies': 0,

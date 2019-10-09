@@ -18,7 +18,7 @@ $tab-height: 42px;
     @extend %justify-content-center;
     @extend %text-transform-uppercase;
     @extend %font-size-14;
-    @extend %color-third;
+    @extend %color-white;
     @extend %position-relative;
 
     &:hover,
@@ -37,7 +37,7 @@ $tab-height: 42px;
             @extend %top-0;
             @extend %left-0;
             @extend %content-empty;
-            @extend %border-top-3px-third;
+            @extend %border-top-3px-white;
             @extend %width-100-percent;;
         }
     }

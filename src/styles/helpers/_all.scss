@@ -1,6 +1,6 @@
-@import "./typography";
 @import "./flex";
 @import "./spaces";
+@import "./typography";
 
 .-circl {
     @extend %border-radius-100-percent;

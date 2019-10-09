@@ -1,7 +1,7 @@
 // NAVBAR PROFILE
 
 .profile {
-    @extend %background-color-second;
+    @extend %background-color-darker-green;
     @extend %display-flex;
     @extend %flex-direction-column;
     @extend %align-items-center;
@@ -23,7 +23,7 @@
 
         .subtitle {
             @extend %font-size-14;
-            @extend %color-gray-light;
+            @extend %color-light-gray;
         }
 
         .name {
@@ -38,7 +38,7 @@
         @extend %display-flex;
 
         .link {
-            img {
+            > * {
                 @extend %border-radius-100-percent;
             }
 

@@ -11,6 +11,16 @@
     %padding-#{$name} {
         padding: $value;
     }
+    
+    // Custom
+    %padding-horizontal-#{$name} {
+        padding-right: $value;
+        padding-left: $value;
+    }
+    %padding-vertical-#{$name} {
+        padding-top: $value;
+        padding-bottom: $value;
+    }
 
     // Individual
     %padding-top-#{$name} {
@@ -25,21 +35,21 @@
     %padding-left-#{$name} {
         padding-left: $value;
     }
-    
-    // Custom
-    %padding-horizontal-#{$name} {
-        padding-right: $value;
-        padding-left: $value;
-    }
-    %padding-vertical-#{$name} {
-        padding-top: $value;
-        padding-bottom: $value;
-    }
 
     // *******
     // Margins
     %margin-#{$name} {
         margin: $value;
+    }
+    
+    // Custom
+    %margin-horizontal-#{$name} {
+        margin-right: $value;
+        margin-left: $value;
+    }
+    %margin-vertical-#{$name} {
+        margin-top: $value;
+        margin-bottom: $value;
     }
 
     // Individual
@@ -54,15 +64,5 @@
     }
     %margin-left-#{$name} {
         margin-left: $value;
-    }
-    
-    // Custom
-    %margin-horizontal-#{$name} {
-        margin-right: $value;
-        margin-left: $value;
-    }
-    %margin-vertical-#{$name} {
-        margin-top: $value;
-        margin-bottom: $value;
     }
 }

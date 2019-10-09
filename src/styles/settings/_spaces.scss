@@ -1,0 +1,14 @@
+// Spacings
+$base-spacing: 8px;
+
+$spacing-small: $base-spacing;
+$spacing-medium: $base-spacing * 2;
+$spacing-large: $base-spacing * 3;
+$spacing-extra-large: $base-spacing * 4;
+
+$spaces: (
+    'small': $spacing-small,
+    'medium': $spacing-medium,
+    'large': $spacing-large,
+    'extra-large': $spacing-extra-large,
+);

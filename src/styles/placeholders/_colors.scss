@@ -5,4 +5,7 @@
     %background-color-#{$name} {
         background: $color;
     }
+    %fill-#{$name} {
+        fill: $color;
+    }
 }
