@@ -1,7 +1,7 @@
 import { h } from 'preact';
 import { useState } from 'preact/hooks';
 import sections from 'Components/Sections';
-import Tabs from './tabs';
+import Tabs from 'Components/Tabs';
 
 export default (props) => {
     const [section, setSection] = useState('me');
