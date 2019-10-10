@@ -1,3 +1,7 @@
+body {
+    scroll-snap-type: y mandatory;
+}
+
 #root {
     // Normalize
     font-family: "Roboto";
@@ -9,6 +13,10 @@
 
     @include onMobile() {
         flex-wrap: wrap;
+    }
+
+    > * {
+        scroll-snap-align: start;
     }
 }
 
