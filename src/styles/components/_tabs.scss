@@ -32,6 +32,7 @@ $tab-height: 42px;
         @extend %cursor-pointer;
         @extend %background-color-main;
 
+        // Active indicator
         &::before {
             @extend %position-absolute;
             @extend %top-0;

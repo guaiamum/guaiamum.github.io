@@ -1,0 +1,30 @@
+.loading {
+  @extend %position-absolute;
+  @extend %font-size-29;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  .dot {
+    animation: pulse 2s linear infinite forwards;
+
+    & ~ .dot {
+        animation-delay: .3s;
+        & ~ .dot {
+            animation-delay: .6s;
+        }
+    }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

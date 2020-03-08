@@ -5,7 +5,7 @@ import { h } from 'preact';
  * @returns {JSX}
  */
 export default ({ skills, skillsWanted }) => (
-    <section class="">
+    <section class="" style="min-height: 200vh;">
         in progress
     </section>
 );
