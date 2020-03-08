@@ -39,7 +39,7 @@
     },
     "dependencies": {
         "classnames": "^2.2.6",
-        "preact": "^10.0.0"
+        "preact": "^10.0.5"
     },
     "scripts": {
         "start:open": "webpack-dev-server --open --mode=development",
