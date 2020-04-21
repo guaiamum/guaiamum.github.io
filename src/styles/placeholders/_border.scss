@@ -2,6 +2,6 @@
     border-radius: 100%;
 }
 
-%border-top-3px-white {
-    border-top: 3px solid map-get($colors, "white");
+%border-top-3px-main {
+    border-top: 3px solid map-get($colors, "main");
 }

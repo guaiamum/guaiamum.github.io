@@ -1,5 +1,6 @@
 const { join } = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
@@ -94,6 +95,9 @@ module.exports = (env, { mode }) => ({
         new HtmlWebPackPlugin({
             template: './template/index.html',
             favicon: './assets/favicon.ico',
+        }),
+        new ScriptExtHtmlWebpackPlugin({
+            defaultAttribute: 'async',
         }),
         new MiniCssExtractPlugin({
             filename: './style.[hash:8].css',

@@ -5,11 +5,14 @@ $tab-height: 42px;
 .tabs {
   @extend %position-sticky;
   @extend %top-0;
-  @extend %background-color-main-fade;
   @extend %display-flex;
   @extend %width-100-percent;
   min-height: $tab-height; // touchable tabs
 
+  // @todo: find a way around text scrolling under nav
+  @include onMobile() {
+    background-color: white;
+  }
   .tab {
     background: inherit;
     @extend %flex-1;
@@ -18,7 +21,6 @@ $tab-height: 42px;
     @extend %justify-content-center;
     @extend %text-transform-uppercase;
     @extend %font-size-14;
-    @extend %color-white;
     @extend %position-relative;
 
     &:hover,
@@ -30,14 +32,13 @@ $tab-height: 42px;
     &._act {
         @extend %font-weight-bold;
         @extend %cursor-pointer;
-        @extend %background-color-main;
 
         &::before {
             @extend %position-absolute;
             @extend %top-0;
             @extend %left-0;
             @extend %content-empty;
-            @extend %border-top-3px-white;
+            @extend %border-top-3px-main;
             @extend %width-100-percent;;
         }
     }

@@ -23,6 +23,7 @@ export default ({ links, name, subtitle, img, ...otherProps }) => {
                     }
                 </footer>
             }
+            <p class="proj-note">Done @ Home since 2017</p>
         </section>
     );
 };

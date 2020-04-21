@@ -1,13 +1,18 @@
 // NAVBAR PROFILE
+%small-text-detail {
+    @extend %font-size-14;
+    @extend %color-dark-gray;
+}
+
 
 .profile {
-    @extend %background-color-darker-green;
+    @extend %shaddow-1;
     @extend %display-flex;
     @extend %flex-direction-column;
     @extend %align-items-center;
     @extend %text-align-center;
     @extend %padding-bottom-small;
-    width: 30vw;
+    width: 35vw;
   
     @include onMobile() {
         min-height: 85vh;
@@ -22,8 +27,7 @@
         @extend %justify-content-center;
 
         .subtitle {
-            @extend %font-size-14;
-            @extend %color-light-gray;
+            @extend %small-text-detail;
         }
 
         .name {
@@ -46,5 +50,11 @@
                 @extend %margin-left-small;
             }
         }
+    }
+
+    .proj-note {
+        @extend %margin-none;
+        @extend %padding-top-small;
+        @extend %small-text-detail;
     }
 }

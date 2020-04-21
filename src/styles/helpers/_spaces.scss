@@ -7,6 +7,9 @@
 }
 
 // Paddings
+.-pam {
+    @extend %padding-medium;
+}
 .-phm {
     @extend %padding-horizontal-medium;
 }

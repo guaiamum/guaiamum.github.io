@@ -1,9 +1,11 @@
+// @font-face{
+//     font-family: "Dosis-ExtraLight";
+//     src: url("../assets/fonts/Dosis-ExtraLight.ttf") format("ttf"),
+// }
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap');
+
 #root {
-    // Normalize
-    font-family: "Roboto";
-    // Pirilimpimpim
-    @extend %background-color-darker-green;
-    @extend %color-white;
+    font-family: "Dosis";
     height: 100vh;
     @extend %display-flex;
 
@@ -13,10 +15,9 @@
 }
 
 main {
-    @extend %background-color-main;
     @extend %width-100-percent;
     @extend %height-100-percent;
-    overflow-y: scroll;
+    overflow-y: auto;
 
     > section {
         min-height: calc(100% - #{$tab-height});

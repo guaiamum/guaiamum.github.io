@@ -7,6 +7,7 @@ $spacing-large: $base-spacing * 3;
 $spacing-extra-large: $base-spacing * 4;
 
 $spaces: (
+    'none': 0,
     'small': $spacing-small,
     'medium': $spacing-medium,
     'large': $spacing-large,
