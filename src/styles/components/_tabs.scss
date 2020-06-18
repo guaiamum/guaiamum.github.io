@@ -3,44 +3,52 @@ $tab-height: 42px;
 
 // @TODO implement this with radio buttons
 .tabs {
-  @extend %position-sticky;
-  @extend %top-0;
-  @extend %display-flex;
-  @extend %width-100-percent;
-  min-height: $tab-height; // touchable tabs
-
-  // @todo: find a way around text scrolling under nav
-  @include onMobile() {
-    background-color: white;
-  }
-  .tab {
-    background: inherit;
-    @extend %flex-1;
+    @extend %position-sticky;
+    @extend %top-0;
     @extend %display-flex;
-    @extend %align-items-center;
-    @extend %justify-content-center;
-    @extend %text-transform-uppercase;
-    @extend %font-size-14;
-    @extend %position-relative;
+    @extend %width-100-percent;
+    min-height: $tab-height; // touchable tabs
 
-    &:hover,
-    &:focus {
-        @extend %font-weight-bold;
-        @extend %cursor-pointer;
+    // @todo: find a way around text scrolling under nav
+    @include onMobile() {
+        background-color: white;
     }
+    .tab {
+        background: inherit;
+        @extend %flex-1;
+        @extend %display-flex;
+        @extend %align-items-center;
+        @extend %justify-content-center;
+        @extend %text-transform-uppercase;
+        @extend %font-size-14;
+        @extend %position-relative;
 
-    &._act {
-        @extend %font-weight-bold;
-        @extend %cursor-pointer;
+        &:hover,
+        &:focus {
+            @extend %font-weight-bold;
+            @extend %cursor-pointer;
+        }
 
-        &::before {
-            @extend %position-absolute;
-            @extend %top-0;
-            @extend %left-0;
-            @extend %content-empty;
-            @extend %border-top-3px-main;
-            @extend %width-100-percent;;
+        &._act {
+            @extend %font-weight-bold;
+            @extend %cursor-pointer;
+
+            &::before {
+                @extend %position-absolute;
+                @extend %top-0;
+                @extend %left-0;
+                @extend %content-empty;
+                @extend %border-top-3px-main;
+                @extend %width-100-percent;
+            }
         }
     }
-  }
+
+    & + section {
+        @extend %padding-horizontal-extra-large;
+
+        @include onMobile() {
+            padding: $spacing-medium;
+        }
+    }
 }

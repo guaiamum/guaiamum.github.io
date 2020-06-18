@@ -5,7 +5,7 @@ import { h } from 'preact';
  * @returns {JSX}
  */
 export default (props) => (
-    <section class="-df -i-ctr -phm">
+    <section class="-df -i-ctr">
         <p class="-upp -fs24">I believe in <span class="-b -fs29">Simplicity</span></p>
     </section>
 );

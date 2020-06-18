@@ -5,9 +5,9 @@ import { h } from 'preact';
  * @returns {JSX}
  */
 export default ({ skills, skillsWanted }) => (
-    <section class="-pam">
+    <section class="">
         <h2>Skills I consider to have</h2>
-        <ol class="skill-list -phm">
+        <ol class="skill-list">
             {
                 skills.map(({ title, description }) => (
                     <li key={title}>

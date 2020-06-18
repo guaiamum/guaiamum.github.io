@@ -5,7 +5,7 @@ import { h } from 'preact';
  * @returns {JSX}
  */
 export default (props) => (
-    <section class="-phm">
+    <section class="">
         <article class="-pvm">
             <h2 class="-upp">Areas of Interest</h2>
             <ul class="-fs20">

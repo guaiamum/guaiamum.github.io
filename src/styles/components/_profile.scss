@@ -4,7 +4,6 @@
     @extend %color-dark-gray;
 }
 
-
 .profile {
     @extend %shaddow-1;
     @extend %display-flex;
@@ -13,7 +12,7 @@
     @extend %text-align-center;
     @extend %padding-bottom-small;
     width: 35vw;
-  
+
     @include onMobile() {
         min-height: 85vh;
         width: 100vw;
