@@ -95,9 +95,10 @@ module.exports = (env, { mode }) => ({
         new HtmlWebPackPlugin({
             template: './template/index.html',
             favicon: './assets/favicon.ico',
+            inject: 'head',
         }),
         new ScriptExtHtmlWebpackPlugin({
-            defaultAttribute: 'async',
+            defaultAttribute: 'defer',
         }),
         new MiniCssExtractPlugin({
             filename: './style.[hash:8].css',

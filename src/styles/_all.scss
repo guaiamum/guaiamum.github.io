@@ -1,11 +1,5 @@
-// @font-face{
-//     font-family: "Dosis-ExtraLight";
-//     src: url("../assets/fonts/Dosis-ExtraLight.ttf") format("ttf"),
-// }
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap');
-
 #root {
-    font-family: "Dosis";
+    font-family: 'Dosis', sans-serif;
     height: 100vh;
     @extend %display-flex;
 
