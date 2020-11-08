@@ -1,5 +1,5 @@
 #root {
-    font-family: 'Dosis', sans-serif;
+    font-family: "Dosis", sans-serif;
     height: 100vh;
     @extend %display-flex;
 
@@ -15,5 +15,15 @@ main {
 
     > section {
         min-height: calc(100% - #{$tab-height});
+        animation: unblur 0.5s linear; /* ... delay iteration-count direction fill-mode;*/
+    }
+}
+
+@keyframes unblur {
+    from {
+        filter: blur(4px);
+    }
+    to {
+        filter: none;
     }
 }
