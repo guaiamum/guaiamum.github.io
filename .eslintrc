@@ -1,6 +1,9 @@
 {
-  "extends": [
-    "./config/eslint/standard.config.js",
-    "./config/eslint/preact.config.js"
-  ]
+    "env": {
+        "jest/globals": true
+    },
+    "extends": [
+        "./config/eslint/standard.config.js",
+        "./config/eslint/preact.config.js"
+    ]
 }
