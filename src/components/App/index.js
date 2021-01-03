@@ -3,8 +3,8 @@ import Profile from 'Components/Profile';
 import Main from 'Components/Main';
 
 export default ({ profile, ...main }) => (
-    <div>
+    <Fragment>
         <Profile {...profile} />
         <Main {...main} />
-    </div>
+    </Fragment>
 );
