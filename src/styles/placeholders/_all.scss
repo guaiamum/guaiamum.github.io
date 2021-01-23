@@ -1,11 +1,11 @@
 // Gathering all in one
-@import "placeholders/border";
-@import "placeholders/flex";
-@import "placeholders/colors";
-@import "placeholders/spaces";
-@import "placeholders/positions";
-@import "placeholders/typography";
-@import "placeholders/shaddows";
+@import "./border";
+@import "./flex";
+@import "./colors";
+@import "./spaces";
+@import "./positions";
+@import "./typography";
+@import "./shaddows";
 
 %content-empty {
     content: "";
