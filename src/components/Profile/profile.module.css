@@ -1,0 +1,45 @@
+.profile {
+    display: grid;
+    justify-items: center;
+    
+    align-content: center;
+    height: 100svh;
+
+    gap: 1rem;
+
+    text-align: center;
+}
+
+.image :global {
+    border-radius: 50%;
+    display: inline-block;
+    
+    font-size: 16px;
+    height: 12em;
+    width: 12em;
+    
+    background-color: #e2e2e1;
+
+    animation: fadein .7s ease-in;
+}
+
+.subtitle :global {
+    font-weight: normal;
+
+    animation: slidein 1s ease-in;
+}
+
+.name :global {
+    font-weight: normal;
+    text-transform: uppercase;
+
+    animation: slidein 1s ease-in;
+}
+/* FOOTER */
+.footer {
+    display: flex;
+    gap: .5rem;
+}
+.link :global {
+    animation: bounce .5s alternate-reverse 2;
+}
