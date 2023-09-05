@@ -1,12 +1,29 @@
 @font-face {
-    font-family: Wix Madefor Display;
-    src: url("https://fonts.googleapis.com/css2?family=Wix+Madefor+Display&display=swap");
+    font-family: VT323;
+    src: url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 }
 
 :global body {
     margin: 0;
 
-    font-family: 'Wix Madefor Display', 'Roboto', sans-serif;
+    font-family: "VT323", monospace;
+    /* fallback */
+    background-color: black;
+
+    background-image: url(/assets/images/vhs.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none;
+        transition: none;
+    }
+
+    body {
+        background-image: none;
+    }
 }
 
 @keyframes :global(slidein) {
@@ -24,7 +41,7 @@
 @keyframes :global(fadein) {
     from {
         opacity: 0;
-        transform: scale(.5);
+        transform: scale(0.5);
     }
 
     to {
@@ -34,11 +51,17 @@
 }
 
 @keyframes :global(bounce) {
-    from {
-        transform: scale(.9) translateY(0);
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
     }
-
-    to {
-        transform: scale(1) translateY(20%);
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
     }
 }

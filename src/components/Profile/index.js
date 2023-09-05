@@ -1,7 +1,7 @@
 import { h } from "preact";
 import Icon from "Components/Icon";
 import styles from "./profile.module.css";
-import Image from 'Assets/images/perfil.jpg';
+import Image from "Assets/images/half-heart.jpg";
 
 export default ({ links, name, subtitle, img }) => {
     return (
@@ -19,8 +19,14 @@ export default ({ links, name, subtitle, img }) => {
             </header>
             {links && (
                 <footer class={styles.footer}>
-                    {links.map(({ id, name, url }) => (
-                        <a class={styles.link} aria-label={name} href={url} key={id}>
+                    {links.map(({ id, name, url }, idx) => (
+                        <a
+                            class={styles.link}
+                            style={`--delay-multip: ${idx};`}
+                            aria-label={name}
+                            href={url}
+                            key={id}
+                        >
                             <Icon name={name} width="35" height="35" />
                         </a>
                     ))}

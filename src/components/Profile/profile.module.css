@@ -8,9 +8,12 @@
     gap: 1rem;
 
     text-align: center;
+
+    color: white;
 }
 
 .image :global {
+    object-fit: cover;
     border-radius: 50%;
     display: inline-block;
     
@@ -20,7 +23,7 @@
     
     background-color: #e2e2e1;
 
-    animation: fadein .7s ease-in;
+    animation: fadein 1s ease-in;
 }
 
 .subtitle :global {
@@ -41,5 +44,7 @@
     gap: .5rem;
 }
 .link :global {
-    animation: bounce .5s alternate-reverse 2;
+    animation: bounce 2s ease 2;
+    /* stagger animations */
+    animation-delay: calc(var(--delay-multip) * 100ms);
 }
